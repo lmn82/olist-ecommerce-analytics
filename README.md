@@ -132,12 +132,35 @@ These recommendations are hypotheses for further business testing, not proven ca
 - Observational relationships do not establish causality.
 - Full end-to-end reproduction from original CSV files requires additional setup and import documentation.
 
-## 9. Project Development
+## 9. AI-Powered Data Analytics Agent
 
-Future extensions may include a natural-language-to-SQL analytics agent, automatic visualizations, and automated business reporting.
+In addition to traditional SQL and Python analysis, this project includes a locally developed **AI-powered data analytics prototype**.
 
----
+The application integrates an LLM API, MySQL, SQLGlot, pandas, and Streamlit to support an interactive analytical workflow:
 
-**Project Type:** Independent Data Analytics Portfolio Project
+**Natural Language Question → SQL Generation → SQL Validation → Human Confirmation → MySQL Query → Visualization → AI Business Insights**
 
-**Dataset:** Olist Brazilian E-Commerce Public Dataset
+### Key Features
+
+- **Text-to-SQL:** Converts Chinese business questions into MySQL SELECT queries.
+- **SQL Validation:** Applies predefined query restrictions and checks table access.
+- **Read-only Data Access:** Uses a database account with SELECT-only permissions.
+- **Automated Visualization:** Generates bar charts and KPI cards based on query results.
+- **AI Business Insights:** Summarizes findings, suggests further analysis, and highlights data limitations.
+- **Interactive Interface:** Provides a local Streamlit web application.
+
+### Example
+
+**Question:** Which 10 states have the highest late-delivery rates?
+
+The application generates SQL, retrieves results from the prepared Olist database, and displays a ranked table, chart, and AI-generated interpretation.
+
+### Technology Stack
+
+Python · MySQL 8.0 · SiliconFlow LLM API · SQLGlot · SQLAlchemy · pandas · Streamlit
+
+**[View the AI Agent Source Code and Setup Guide](agent/README.md)**
+
+**Development Status:** Functional local prototype. Not production-ready or publicly deployed.
+
+The Agent uses the prepared logistics dataset. Its SQL restrictions and AI-generated business interpretations require human review.
